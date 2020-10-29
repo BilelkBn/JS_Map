@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>MapsFriends</title>
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.6.0/leaflet.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/esri-leaflet-geocoder/2.3.2/esri-leaflet-geocoder.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.css">
+    <link rel="stylesheet" href="view/carte/assets/css/login.css">
+    <link rel="stylesheet" href="view/carte/assets/css/map.css">
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.6.0/leaflet.js"></script>
+    <script src="https://unpkg.com/esri-leaflet@2.3.3/dist/esri-leaflet.js"
+    integrity="sha512-cMQ5e58BDuu1pr9BQ/eGRn6HaR6Olh0ofcHFWe5XesdCITVuSBiBZZbhCijBe5ya238f/zMMRYIMIIg1jxv4sQ=="
+    crossorigin=""></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/esri-leaflet-geocoder/2.3.2/esri-leaflet-geocoder.js"></script>
+    <script src="view/carte/app.js"></script>
+	
+</head>
+<body>
+  <?php if($profil['addr'] == '' & $profil['cp'] == '') { ?>
+    <div id="verif">
+        <div class="container">  
+            <form id="contact" action="" method="post">
+                <input placeholder="Adresse :" type="text" tabindex="2" required>
+                <input placeholder="Code Postal :" type="tel" tabindex="3" required>
+                <button name="gobtn" type="submit" id="go" data-submit="...Sending">Go !</button>
+            </form>
+          </div>
+    </div>
+    <?php }else{ ?>
+      <div id="verif" style="display: none;">
+        <div class="container">  
+            <form id="contact" action="" method="post">
+                <input id="lat" placeholder="Adresse :" type="text" tabindex="2" required value="<?php echo $profil['addr'];?>">
+                <input id="lng" placeholder="Code Postal :" type="tel" tabindex="3" required value="<?php echo $profil['cp'];?>">
+            </form>
+          </div>
+    </div>
+    <?php  }?>
+
+    <div class="game" style>
+        <div class="stat">
+            <div id="pseudo"><h1><?php echo strtoupper ( $login );?></h1></div>
+            <div id="argent"><div class="ui labeled button" tabindex="0">
+                <div class="ui basic blue button">
+                  <i class="money icon"></i> Argents
+                </div>
+                <a id="solde" class="ui basic left pointing blue label">
+                  <?php echo $argents;?>
+                </a>
+              </div>
+			</div>
+			<div id="stats">
+				<div class="ui buttons">
+					<button class="ui button"><span class="classement"></span> </button>
+					<div class="or" data-text="/"></div>
+					<button class="ui positive button"><span class="players"></span> Player(s)</button>
+				</div>
+			</div>
+        
+		</div>
+	<div id="classement" class="container"></div>	
+	<div id="Maps"></div>
+	<audio preload="auto" src="view/carte/assets/audio/cashSound.mp3" id="player_audio">
+	</div>
+	<script> </script>
+</body>
+</html>

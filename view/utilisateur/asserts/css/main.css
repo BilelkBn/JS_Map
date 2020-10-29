@@ -1,0 +1,244 @@
+@font-face {
+ font-family: "Montserrat";
+ src: url("../fonts/Montserrat-Bold.otf");
+}
+
+*{
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  width: 100%;
+}
+
+.header {
+    width: 85%;
+    z-index: 1000;
+}
+
+.header-top {
+    width: 100%;
+    height: 90px;
+    padding: 0 50px;
+    transition: height 0.5s;
+}
+
+.logo {
+    width: 150px;
+    transition: height 0.5s;
+    z-index: 1000;
+}
+
+.menu-p {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  margin: 0 auto;
+  background: white;
+  z-index: 100;
+}
+
+.menu > ul {
+  margin: 0 auto;
+  width: 100%;
+  list-style: none;
+  position: relative;
+  box-sizing: border-box;
+  position: static;
+}
+
+.menu > ul:before,
+.menu > ul:after {
+  content: "";
+  display: table;
+}
+
+.menu > ul:after {
+  clear: both;
+}
+
+.menu > ul > li {
+  display:inline-block;
+  background: white;
+  padding: 0;
+  margin: 0;
+}
+
+.menu > ul > li a {
+  color: inherit;
+  text-decoration: none;
+  padding: 1.5em 1em;
+  display: block;
+  font-size: 1em;
+}
+
+.menu > ul > li > ul {
+  display: none;
+  width: 100%;
+  background: white;
+  padding: 20px;
+  position: absolute;
+  z-index: 100;
+  left: 0;
+  margin: 0;
+  list-style: none;
+  box-sizing: border-box;
+}
+
+
+.menu a:hover {
+  color: inherit;
+  }
+
+
+.menu .vie-scolaire > ul > li > a:hover {
+  color: #a20909;
+}
+
+.menu .vie-scolaire > ul  {
+  border: 2px solid #a20909;
+}
+
+.header-top.vie-scolaire {
+  background-color: #a20909;
+}
+
+.vie-scolaire > a:hover {
+  color: #a20909;
+}
+
+.menu-p.vie-scolaire {
+  border-bottom: 2px solid #a20909;
+}
+
+.menu .eau > ul > li > a:hover {
+  color: #2596aa;
+}
+
+.menu .eau > ul  {
+  border: 2px solid #2596aa;
+}
+
+.header-top.eau {
+  background-color: #2596aa;
+}
+
+.eau > a:hover {
+  color: #2596aa;
+}
+
+.menu-p.eau {
+  border-bottom: 2px solid #2596aa;
+}
+
+.menu .emploi > ul > li > a:hover {
+  color: #c6431b;
+}
+.menu .emploi > ul  {
+  border: 2px solid #c6431b;
+}
+
+.header-top.emploi {
+  background-color: #c6431b;
+}
+
+.emploi > a:hover {
+  color: #c6431b;
+}
+
+.menu-p.emploi{
+  border-bottom: 2px solid #c6431b;
+}
+
+/***** Aménagement et urbanisme ***/
+.menu .amenagement > ul > li > a:hover {
+  color: #5f72b2;
+}
+
+.menu .amenagement > ul  {
+  border: 2px solid #5f72b2;
+}
+
+.header-top.amenagement {
+  background-color: #5f72b2;
+}
+
+.amenagement > a:hover {
+  color: #5f72b2;
+}
+
+.menu-p.amenagement{
+  border-bottom: 2px solid #5f72b2;
+}
+
+.menu .tourisme > ul > li > a:hover {
+  color: #d5872e;
+}
+
+.menu .tourisme > ul  {
+  border: 2px solid #d5872e;
+}
+
+.header-top.tourisme {
+  background-color: #d5872e;
+}
+
+.tourisme > a:hover {
+  color: #d5872e;
+}
+
+.menu-p.tourisme{
+  border-bottom: 2px solid #d5872e;
+}
+
+.menu .environnement > ul > li > a:hover {
+  color: #2aa868;
+}
+
+.menu .environnement > ul  {
+    border: 2px solid #2aa868;
+
+}
+
+.header-top.environnement {
+    background-color: #2aa868;
+}
+
+.environnement > a:hover {
+  color: #2aa868;
+}
+
+.menu-p.environnement{
+  border-bottom: 2px solid #2aa868;
+}
+
+.menu .intercom > ul > li > a:hover {
+  color: #103d82;
+}
+
+.menu .intercom > ul  {
+  border: 2px solid #103d82;   
+}
+
+.header-top.intercom {
+  background-color: #103d82;
+}
+
+.intercom > a:hover {
+  color: #103d82;
+}
+
+.menu-p.intercom{
+  border-bottom: 2px solid #103d82;
+}
+
+body {
+  width: 100%;
+}
+.header {
+  width: 100%;
+}
+.navbar {
+  width: 100%;
+}
